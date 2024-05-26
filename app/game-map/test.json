@@ -1,0 +1,69 @@
+{
+    "1": {
+        "prompt": "You wake up in a coffee shop. There is a knife on the table. You notice a sullen man drinking at a bar. No one else is in the establishment",
+        "ending": false,
+        "options": [
+            {
+                "id": "1a",
+                "description": "approach the man",
+                "next": 1
+            },
+            {
+                "id": "1b",
+                "description": "grab knife",
+                "next": 2
+            },
+            {
+                "id": "1c",
+                "description": "drink coffee",
+                "next": 3
+                
+            }
+        ]
+    },
+    "2":{
+        "prompt": "You wake up in a coffee shop. There is a knife on the table. You notice a sullen man drinking at a bar. No one else is in the establishment",
+        "ending": false,
+        "options": [
+            {
+                "id": "1a",
+                "description": "approach the man",
+                "next": 1
+            },
+            {
+                "id": "1b",
+                "description": "grab knife",
+                "next": 2
+            },
+            {
+                "id": "1c",
+                "description": "drink coffee",
+                "next": 3
+                
+            }
+        ]
+    },
+    "3": {
+        "prompt": "You wake up in a coffee shop. There is a knife on the table. You notice a sullen man drinking at a bar. No one else is in the establishment",
+        "ending": false,
+        "options": [
+            {
+                "id": "1a",
+                "description": "approach the man",
+                "next": 1
+            },
+            {
+                "id": "1b",
+                "description": "grab knife",
+                "next": 2
+            },
+            {
+                "id": "1c",
+                "description": "drink coffee",
+                "next": 3
+                
+            }
+        ]
+    }
+
+}
