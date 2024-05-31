@@ -1,12 +1,54 @@
+'use client'
 import Image from "next/image";
 import styles from "../page.module.css";
+import { Button } from "@nextui-org/button";
+import { useEffect, useState } from "react";
+import platoDungeon from '../game-map/test.json'
 
 export default function Home() {
+
+  const [step, setStep] = useState(platoDungeon.start)
+  const [options, setOptions] = useState()
+  const [gameMap, setGameMap] = useState(platoDungeon)
+  const [popupPrompt, setPopupPrompt] = useState("")
+
+  useEffect(() => {
+
+  }, [])
+
+
+  function handleSelection(opt: any) {
+    if (!opt.popupNote) {
+      setStep(opt.next)
+      setPopupPrompt('')
+    }
+    else {
+      setPopupPrompt(opt.popupNote)
+    }
+  }
+
+  function generateOptions() {
+    if (!gameMap.steps[`${step}`].ending) {
+
+      return gameMap.steps[`${step}`].options.map((opt, i) => {
+        return <Button key={i} id={opt.id} value={opt.next} color="primary" variant="ghost" onClick={() => handleSelection(opt)}>{opt.description}</Button>
+      })
+    }
+    else {
+      return <Button color="primary" variant="ghost" onClick={()=>{window.location.href='/game'}}>Play Again</Button>
+    }
+  }
+
+  function generatePrompt() {
+    console.log("XXXXXX")
+    return gameMap.steps[`${step}`].prompt
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing the controls map
+          {gameMap["title"]}
         </p>
 
       </div>
@@ -20,58 +62,23 @@ export default function Home() {
           height={37}
           priority
         />
+
       </div>
 
-      <div className={styles.grid}>
-        {/* <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div className={styles.center}>
+        <p>
+          {generatePrompt()}
+        </p>
+      </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <div className={styles.center}>
+        <p>
+          {popupPrompt}
+        </p>
+      </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a> */}
+      <div className={styles.center}>
+        {generateOptions()}
       </div>
     </main>
   );

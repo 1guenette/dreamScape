@@ -1,7 +1,14 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Button } from "@nextui-org/button";
 
 export default function Home() {
+
+  function startGame(){
+    console.log("====")
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -12,12 +19,12 @@ export default function Home() {
         {/* <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
           >
             By{" Levick Labs"} */}
 
-            {/* <Image
+        {/* <Image
               src="/vercel.svg"
               alt="Vercel Logo"
               className={styles.vercelLogo}
@@ -25,21 +32,28 @@ export default function Home() {
               height={24}
               priority
             /> */}
-          {/* </a>
+        {/* </a>
         </div> */}
       </div>
 
-      <div className={styles.center}>
-      <h2>
+      <div >
+        <div className={styles.center}>
+          <h2>
             Welcome to Dreamscape
           </h2>
+        </div>
+        <div className={styles.center}>
+          <Button color="primary" variant="ghost" onClick={()=>{window.location.href='/game'}}>
+            Start
+          </Button>
+        </div>
       </div>
 
       <div className={styles.grid}>
         <a
           href="/game-map"
           className={styles.card}
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <h2>
@@ -51,7 +65,7 @@ export default function Home() {
         <a
           href="/about"
           className={styles.card}
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <h2>
@@ -63,7 +77,7 @@ export default function Home() {
         <a
           href="/game"
           className={styles.card}
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <h2>
