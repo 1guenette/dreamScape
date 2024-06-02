@@ -8,13 +8,35 @@ import platoDungeon from '../game-map/library/test1/test.json'
 export default function Home() {
 
   const [step, setStep] = useState(platoDungeon.start)
-  const [options, setOptions] = useState()
   const [gameMap, setGameMap] = useState(platoDungeon)
+  
+  const [promptDisplay, setPromptDisplay] = useState("")
   const [popupPrompt, setPopupPrompt] = useState("")
 
   useEffect(() => {
+    console.log("======")
 
-  }, [])
+    let i = 0;
+    const stringResponse = gameMap.steps[step].prompt
+
+    const intervalId = setInterval(() => {
+      setPromptDisplay(stringResponse.slice(0, i));
+  
+      i++;
+  
+      if (i > stringResponse.length) {
+        clearInterval(intervalId);
+      }
+    }, 50);
+  
+
+    return () => clearInterval(intervalId);
+  }, [step])
+
+  function displayPrompt(){
+
+
+  }
 
 
   function handleSelection(opt: any) {
@@ -39,10 +61,7 @@ export default function Home() {
     }
   }
 
-  function generatePrompt() {
-    return gameMap.steps[`${step}`].prompt
-  }
-
+  
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -66,7 +85,7 @@ export default function Home() {
 
       <div className={styles.center}>
         <p>
-          {generatePrompt()}
+          {promptDisplay}
         </p>
       </div>
 
