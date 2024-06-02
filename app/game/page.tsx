@@ -51,7 +51,10 @@ export default function Home() {
       })
     }
     else {
-      return <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/game' }}>Play Again</Button>
+      return <>
+      <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/game' }}>Play Again</Button>
+      <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/story-library' }}>New Dream</Button>
+      </>
     }
   }
 
