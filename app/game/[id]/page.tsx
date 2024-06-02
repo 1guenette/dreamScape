@@ -73,7 +73,7 @@ export default function Home(props) {
             }
             else {
                 return <>
-                    <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/game' }}>Play Again</Button>
+                    <Button color="primary" variant="ghost" onClick={() => { window.location.href = `${window.location.pathname}` }}>Play Again</Button>
                     <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/story-library' }}>New Dream</Button>
                 </>
             }

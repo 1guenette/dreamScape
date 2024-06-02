@@ -1,13 +1,23 @@
+'use client'
 import Image from "next/image";
 import { readdirSync } from "fs";
 import styles from "../page.module.css";
 import { Button } from "@nextui-org/button";
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
-  function getStaticProps() {
-    return { props: { msg: 'hello world' } }
-  }
+
+  const [gameList, setGameList] = useState([])
+
+  useEffect(()=>{
+    fetch('/api/story-library').then(async (res)=>{
+      let data = await res.json()
+      console.log(data)
+      setGameList(data)
+      
+    })
+  },[])
   
 
 
@@ -20,18 +30,14 @@ export default function Home() {
       </div>
       <p>Pick from one of our many stories</p>
 
-      <div className={styles.grid}>
-        <a href='/game' clickable="true">Test1</a>
+      {gameList.map((res)=>  <a href={`/game/${res}`} clickable="true">{`${res}`}</a>)}
+
+      {/* <div className={styles.grid}>
+        <a href='/game/test1' clickable="true">Test1</a>
       </div>
       <div className={styles.grid}>
-        <a href='/game' clickable="true">Test2</a>
-      </div>
-      <div className={styles.grid}>
-        <a href='/game' clickable="true">Test3</a>
-      </div>
-      <div className={styles.grid}>
-        <a href='/game' clickable="true">Test4</a>
-      </div>
+        <a href='/game/test2' clickable="true">Test2</a>
+      </div> */}
     </main>
   );
 }
