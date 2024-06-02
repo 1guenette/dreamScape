@@ -51,15 +51,15 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href="/game-map"
+          href="/story-library"
           className={styles.card}
           target="_self"
           rel="noopener noreferrer"
         >
           <h2>
-            Game Map <span>-&gt;</span>
+            Story Library <span>-&gt;</span>
           </h2>
-          <p>Edit the dreamscape story</p>
+          <p>Explore the many different stories of the the Dreamscape wold</p>
         </a>
 
         <a

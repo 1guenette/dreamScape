@@ -55,8 +55,8 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           // className={styles.logo}
-          src={ `/${gameMap.steps[`${step}`].image}`}
-          alt="Next.js Logo"
+          src={ `/game-library/test1/${gameMap.steps[`${step}`].image}`}
+          alt=""
           width={560}
           height={74}
           priority

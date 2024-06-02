@@ -1,109 +1,37 @@
-'use client'
 import Image from "next/image";
+import { readdirSync } from "fs";
 import styles from "../page.module.css";
 import { Button } from "@nextui-org/button";
-import { useEffect, useState } from "react";
-import platoDungeon from '../game-map/test.json'
+// import platoDungeon from '../game-map/test.json'
 
 export default function Home() {
 
-
-
-
+  function getStaticProps() {
+    return { props: { msg: 'hello world' } }
+  }
+  
 
 
   return (
     <main className={styles.main}>
-            <div className={styles.description}>
+      <div className={styles.description}>
         <p>
           Dream Library
         </p>
-
       </div>
-      <div className={styles.description}>
-        {/* <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p> */}
-        {/* <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            By{" Levick Labs"} */}
-
-        {/* <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            /> */}
-        {/* </a>
-        </div> */}
-      </div>
-
-      <div >
-        <div className={styles.center}>
-          <h2>
-            Welcome to Dreamscape
-          </h2>
-        </div>
-
-      </div>
+      <p>Pick from one of our many stories</p>
 
       <div className={styles.grid}>
-        {/* <a
-          href="/game-map"
-          className={styles.card}
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Game Map <span>-&gt;</span>
-          </h2>
-          <p>Edit the dreamscape story</p>
-        </a>
-
-        <a
-          href="/about"
-          className={styles.card}
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            About Us <span>-&gt;</span>
-          </h2>
-          <p>Learn about the dreamscape project</p>
-        </a>
-
-        <a
-          href="/game"
-          className={styles.card}
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            New Game <span>-&gt;</span>
-          </h2>
-          <p>Get ready to Dream</p>
-        </a>
-
-        <a
-          href="/support"
-          className={styles.card}
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Support Us <span>-&gt;</span>
-          </h2>
-          <p>
-            Help support the developers and artists that keep this game free
-          </p>
-        </a> */}
+        <a href='/game' clickable="true">Test1</a>
+      </div>
+      <div className={styles.grid}>
+        <a href='/game' clickable="true">Test2</a>
+      </div>
+      <div className={styles.grid}>
+        <a href='/game' clickable="true">Test3</a>
+      </div>
+      <div className={styles.grid}>
+        <a href='/game' clickable="true">Test4</a>
       </div>
     </main>
   );
