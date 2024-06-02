@@ -2,7 +2,6 @@ import Image from "next/image";
 import { readdirSync } from "fs";
 import styles from "../page.module.css";
 import { Button } from "@nextui-org/button";
-// import platoDungeon from '../game-map/test.json'
 
 export default function Home() {
 

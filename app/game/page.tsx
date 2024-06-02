@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../page.module.css";
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from "react";
-import platoDungeon from '../game-map/library/test1/test.json'
+import platoDungeon from '../game-map/library/test1/test1.json'
 
 export default function Home() {
 
@@ -17,6 +17,8 @@ export default function Home() {
 
     let i = 0;
     const stringResponse = gameMap.steps[step].prompt
+
+    console.log(`${gameMap.steps[`${step}`].image}`)
 
     const intervalId = setInterval(() => {
       if (i < stringResponse.length + 1) {
@@ -85,7 +87,7 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           // className={styles.logo}
-          src={`/game-library/test1/${gameMap.steps[`${step}`].image}`}
+          src={`/game-library/test1${gameMap.steps[`${step}`].image}`}
           alt=""
           width={560}
           height={74}
