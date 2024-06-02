@@ -32,11 +32,6 @@ export default function Home() {
     return () => clearInterval(intervalId);
   }, [step])
 
-  function displayPrompt() {
-
-
-  }
-
 
   function handleSelection(opt: any) {
     if (!opt.popupNote) {
