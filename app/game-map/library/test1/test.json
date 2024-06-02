@@ -3,7 +3,7 @@
     "start": "1",
     "steps": {
         "1": {
-            "prompt": "You wake up in a dungeon, your friend is sitting on the other side. Next to him is a hole tunneling to the outside. What do you do?",
+            "prompt": "You wake up in a dungeon, your friend is sitting on the other side. Next to him is a hole tunneling to paradise. What do you do?",
             "ending": false,
             "image": "pic1.png",
             "options": [
@@ -55,7 +55,7 @@
             ]
         },
         "3": {
-            "prompt": "You escape to the outside world. You boat is seen over the horizon. You are on your way to a new paradise.",
+            "prompt": "You escape to the outside world. A boat is seen over the horizon. You are on your way to a new paradise.",
             "image": "pic4.png",
             "ending": true
         },

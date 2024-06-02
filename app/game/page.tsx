@@ -9,31 +9,30 @@ export default function Home() {
 
   const [step, setStep] = useState(platoDungeon.start)
   const [gameMap, setGameMap] = useState(platoDungeon)
-  
+
   const [promptDisplay, setPromptDisplay] = useState("")
   const [popupPrompt, setPopupPrompt] = useState("")
 
   useEffect(() => {
-    console.log("======")
 
     let i = 0;
     const stringResponse = gameMap.steps[step].prompt
 
     const intervalId = setInterval(() => {
-      setPromptDisplay(stringResponse.slice(0, i));
-  
-      i++;
-  
-      if (i > stringResponse.length) {
+      if (i < stringResponse.length + 1) {
+        setPromptDisplay(stringResponse.slice(0, i));
+        i++;
+      }
+      else {
         clearInterval(intervalId);
       }
     }, 50);
-  
+
 
     return () => clearInterval(intervalId);
   }, [step])
 
-  function displayPrompt(){
+  function displayPrompt() {
 
 
   }
@@ -57,11 +56,11 @@ export default function Home() {
       })
     }
     else {
-      return <Button color="primary" variant="ghost" onClick={()=>{window.location.href='/game'}}>Play Again</Button>
+      return <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/game' }}>Play Again</Button>
     }
   }
 
-  
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -74,7 +73,7 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           // className={styles.logo}
-          src={ `/game-library/test1/${gameMap.steps[`${step}`].image}`}
+          src={`/game-library/test1/${gameMap.steps[`${step}`].image}`}
           alt=""
           width={560}
           height={74}
