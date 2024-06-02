@@ -9,7 +9,6 @@ type Params = {
 export async function GET(request: NextRequest, path: Params) {
   
     let fileName = `${path.params.id}.json`
-    console.log(fileName)
-    let storyFile = readFileSync(`./app/game-map/library/test1/${fileName}`, 'utf8')
+    let storyFile = readFileSync(`./app/game-map/library/${path.params.id}/${fileName}`, 'utf8')
     return NextResponse.json(JSON.parse(storyFile), { status: 200 });
   }
