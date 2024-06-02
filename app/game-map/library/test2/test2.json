@@ -1,5 +1,5 @@
 {
-    "title": "Plato's Dungeon",
+    "title": "Plato's Dungeon 2 COPY",
     "start": "1",
     "steps": {
         "1": {
@@ -15,7 +15,7 @@
                 },
                 {
                     "id": 2,
-                    "description": "Escape through tunnel",
+                    "description": "HAHAHAHAHA",
                     "redirect": true,
                     "next": "3"
                 }
@@ -47,7 +47,7 @@
                 },
                 {
                     "id": 3,
-                    "description": "Escape through tunnel",
+                    "description": "HAHAHAHAHA",
                     "redirect": true,
                     "next": "3"
                 }
@@ -63,7 +63,7 @@
             "options": [
                 {
                     "id": 1,
-                    "description": "Escape through tunnel",
+                    "description": "HAHAHAHAHA",
                     "redirect": true,
                     "next": "3"
 

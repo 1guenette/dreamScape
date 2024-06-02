@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../page.module.css";
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from "react";
-import platoDungeon from '../game-map/test.json'
+import platoDungeon from '../game-map/library/test1/test.json'
 
 export default function Home() {
 
@@ -40,7 +40,6 @@ export default function Home() {
   }
 
   function generatePrompt() {
-    console.log("XXXXXX")
     return gameMap.steps[`${step}`].prompt
   }
 
@@ -55,11 +54,11 @@ export default function Home() {
 
       <div className={styles.center}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
+          // className={styles.logo}
+          src={ `/${gameMap.steps[`${step}`].image}`}
           alt="Next.js Logo"
-          width={180}
-          height={37}
+          width={560}
+          height={74}
           priority
         />
 
