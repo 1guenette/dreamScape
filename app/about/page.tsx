@@ -5,37 +5,36 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+      <a
+            href="/"
+            target="_self"
+            rel="noopener noreferrer"
+          >
         <p>
-          Get started by editing the controls map
+         Back
         </p>
+        </a>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" "}
-            <Image
+            By{" "} Levick Labs
+            {/* <Image
               src="/vercel.svg"
               alt="Vercel Logo"
               className={styles.vercelLogo}
               width={100}
               height={24}
               priority
-            />
+            /> */}
           </a>
         </div>
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        <p>Dreamscape is an open source choose-your-own adventure game, allowing artists and story tellers to generate interactive stories</p>
       </div>
 
       <div className={styles.grid}>
