@@ -68,11 +68,11 @@ export default function Home() {
             rel="noopener noreferrer"
           >
         <p>
-         Back
+        &larr; Lobby
         </p>
         </a>
 
-        
+
 
         <p>
           {gameMap["title"]}
