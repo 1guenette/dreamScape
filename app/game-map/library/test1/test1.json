@@ -5,7 +5,7 @@
         "1": {
             "prompt": "You wake up in a dungeon, your friend is sitting on the other side. Next to him is a hole tunneling to paradise. What do you do?",
             "ending": false,
-            "image": "pic1.png",
+            "image": "/pic1.png",
             "options": [
                 {
                     "id": 1,
@@ -24,7 +24,7 @@
         "2": {
             "prompt": "Your friend is weak. He won't be able to crawl through the tunnel with you. He hands you a piece of paper and a match. What do you do?",
             "ending": false,
-            "image": "pic2.png",
+            "image": "/pic2.png",
             "options": [
                 {
                     "id": 1,
@@ -56,13 +56,13 @@
         },
         "3": {
             "prompt": "You escape to the outside world. A boat is seen over the horizon. You are on your way to a new paradise.",
-            "image": "pic4.png",
+            "image": "/pic4.png",
             "ending": true
         },
         "4": {
             "prompt": "The note reads, \"Don't leave me here\" what do you do ",
             "ending": false,
-            "image": "pic3.png",
+            "image": "/pic3.png",
             "options": [
                 {
                     "id": 1,
@@ -81,7 +81,7 @@
         },
         "5": {
             "prompt": "You sit with your friend. Darkness becomes light. And paradise was always here.",
-            "image": "pic5.png",
+            "image": "/pic5.png",
             "ending": true
            
         }

@@ -52,8 +52,8 @@ export default function Home() {
     }
     else {
       return <>
-      <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/game' }}>Play Again</Button>
-      <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/story-library' }}>New Dream</Button>
+        <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/game' }}>Play Again</Button>
+        <Button color="primary" variant="ghost" onClick={() => { window.location.href = '/story-library' }}>New Dream</Button>
       </>
     }
   }
@@ -62,14 +62,14 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-      <a
-            href="/"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-        <p>
-        &larr; Lobby
-        </p>
+        <a
+          href="/lobby"
+          target="_self"
+          rel="noopener noreferrer"
+        >
+          <p>
+            &larr; Lobby
+          </p>
         </a>
 
 
