@@ -62,9 +62,23 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+      <a
+            href="/"
+            target="_self"
+            rel="noopener noreferrer"
+          >
+        <p>
+         Back
+        </p>
+        </a>
+
+        
+
         <p>
           {gameMap["title"]}
         </p>
+
+
 
       </div>
 
