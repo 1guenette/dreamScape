@@ -15,7 +15,6 @@ export default function Home() {
       let data = await res.json()
       console.log(data)
       setGameList(data)
-      
     })
   },[])
   
@@ -30,7 +29,8 @@ export default function Home() {
       </div>
       <p>Pick from one of our many stories</p>
 
-      {gameList.map((res)=>  <a href={`/game/${res}`} clickable="true">{`${res}`}</a>)}
+
+      {gameList.map((res)=>  <div className={styles.center}><p><a href={`/game/${res}`} clickable="true">{`${res}`}</a></p></div>)}
 
       {/* <div className={styles.grid}>
         <a href='/game/test1' clickable="true">Test1</a>

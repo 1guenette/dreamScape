@@ -65,7 +65,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <a
-          href="/lobby"
+          href="/"
           target="_self"
           rel="noopener noreferrer"
         >

@@ -81,7 +81,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            New Game <span>-&gt;</span>
+            Random Dream <span>-&gt;</span>
           </h2>
           <p>Get ready to Dream</p>
         </a>
