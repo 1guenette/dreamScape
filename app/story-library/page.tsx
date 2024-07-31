@@ -30,7 +30,7 @@ export default function Home() {
       <p>Pick from one of our many stories</p>
 
 
-      {gameList.map((res)=> <div className={styles.center}> <div className={styles.center}><p><a href={`/game/${res}`} clickable="true">{`${res}`}</a></p></div></div>)}
+      {gameList.map((res, i)=> <div key={i} className={styles.center}> <div key={i} className={styles.center}><p><a key={i} href={`/game/${res}`} clickable="true">{`${res}`}</a></p></div></div>)}
 
       {/* <div className={styles.grid}>
         <a href='/game/test1' clickable="true">Test1</a>

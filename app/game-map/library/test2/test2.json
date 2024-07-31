@@ -35,7 +35,7 @@
                 },
                 {
                     "id": 2,
-                    "description": "try to talk to friend note",
+                    "description": "try to talk to friend",
                     "redirect": false,
                     "popupNote": "Your friend is too weak to speak, His brittle hand timidly waves the note",
                     "next": "2"

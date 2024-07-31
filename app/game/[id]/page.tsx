@@ -4,7 +4,7 @@ import styles from "../../page.module.css";
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from "react";
 
-export default function Home(props) {
+export default function Home(props:any) {
 
     const [step, setStep] = useState(0)
     const [gameMap, setGameMap] = useState({})
