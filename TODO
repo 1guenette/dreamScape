@@ -2,3 +2,42 @@
 - Setup db retrieval of stories
 - Setup story library
 - Setup electron app
+
+
+
+      {/* <Card>
+                      <Accordion >
+                          <AccordionItem key="1" aria-label="Accordion 1" title="You wake up in a cave. your friend is tied to a wall and a hole exists to the outside world">
+  
+                              <Card style={{marginLeft: "20px"}}>
+                                  <Accordion >
+                                      <AccordionItem key="1" aria-label="Accordion 2" title=" Approach friend">
+  
+                                          <Card style={{marginLeft: "40px"}}>
+                                              <Accordion >
+                                                  <AccordionItem key="1" aria-label="Accordion 1" title="Your friend is too weak to escape. He hands you a match and a note. What do you do?">
+                                                      <Card style={{marginLeft: "60px"}}>
+                                                          <Accordion >
+                                                              <AccordionItem key="1" aria-label="Light Match" title=" Approach friend">
+                                                              </AccordionItem>
+                                                              <AccordionItem key="2" aria-label="Leave through tunnel" title="Escape through tunnel">
+                                                              </AccordionItem>
+                                                          </Accordion>
+                                                      </Card>
+  
+                                                  </AccordionItem>
+                                              </Accordion>
+                                          </Card>
+  
+                                      </AccordionItem>
+                                      <AccordionItem key="2" aria-label="Accordion 2" title="Escape through tunnel">
+                                      </AccordionItem>
+                                  </Accordion>
+                              </Card>
+  
+                          </AccordionItem>
+                      </Accordion>
+                  </Card> 
+                  
+                  
+                  */}
