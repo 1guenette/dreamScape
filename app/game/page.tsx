@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../page.module.css";
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from "react";
-import platoDungeon from '../game-map/library/test1/test1.json'
+import platoDungeon from '../library/test1/test1.json'
 
 export default function Home() {
 
